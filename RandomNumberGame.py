@@ -1,9 +1,19 @@
 import random 
-rand = int(random.randrange(0,10))
-guess = int(input("Guess the number: "))
-    while rand != guess
-        if rand > guess
-            print "Guess Higher"
-        else:
-            print "Guess Lower"
-        
+rand = int(random.randrange(1,10))
+guess = int(input("Guess a number between 1 and 10: "))
+Guesses = 1
+while(rand != guess):
+    if (rand > guess):
+        print ("Guess Higher ")
+    else:
+        print ("Guess Lower ")
+    guess = int(input("Guess a new number: "))
+    Guesses += 1
+
+if (Guesses < 3):
+    print ("You're good at this! You guessed the number correctly in " + str(Guesses) + " guesses!")
+elif(Guesses < 6):
+    print ("You're averag. You guessed the number correctly in " + str(Guesses) + " guesses.")
+else:
+    print ("You're really terrible at this. It took you " + str(Guesses) + " guesses to find the correct number.")
+
