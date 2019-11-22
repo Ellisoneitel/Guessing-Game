@@ -4,10 +4,9 @@ guess = int(input("Guess a number between 1 and 10: "))
 Guesses = 1
 while(rand != guess):
     if (rand > guess):
-        print ("Guess Higher ")
+        guess = int(input("Guess a higher number: "))
     else:
-        print ("Guess Lower ")
-    guess = int(input("Guess a new number: "))
+        guess = int(input("Guess a lower number: "))
     Guesses += 1
 
 if (Guesses < 3):
